@@ -1,9 +1,14 @@
 import React from "react";
 
 function Footer() {
-    return <p>
+    return (
+    <div class="footer">
+    <p>
         Sample footer
     </p>
+    </div>
+    
+    );
 }
 
 export default Footer;
