@@ -18,6 +18,7 @@ function JoinPage(){
 // });
     return(
         <>
+        <div className="loginPage">
         <div class="container " id="container">
       <div class="form-container signUp-container">
         <form action="#">
@@ -77,6 +78,7 @@ function JoinPage(){
           >.
         </p>
       </footer>
+    </div>
     </div>
         </>
     )

@@ -3,17 +3,16 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import Home from "./Home";
-import { div } from "prelude-ls";
 
 function App(){
     return (
         <div>
             {/* <Header />   */}
-            <div class="main">
+            <div className="main">
             <Sidebar />
             <Home />
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

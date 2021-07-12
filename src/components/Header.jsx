@@ -1,14 +1,15 @@
 import React,{useState} from "react";
 import App from "./App";
 import Join from "./loginpage"
-
+import {BroswerRouter,Link,Switch,Route} from 'react-router-dom';
+import Login from "./loginpage"
 var shw=false;
 function Header() {
-    const [isShow,setShow]=useState(false);
-    var btnname=!isShow?"Login/SignUp":"Back";
+    // const [isShow,setShow]=useState(false);
+    // var btnname=!isShow?"Login/SignUp":"Back";
    
      return (
-         !isShow?
+         
          <>
         <div class="navbar">
             <div class="nav">
@@ -21,7 +22,7 @@ function Header() {
 
                 <div class="searchbar">
 
-                    <form action="/action_page.php">
+                    <form action="#">
                         <input type="text" class="search" placeholder="Search.." name="search" />
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
@@ -29,20 +30,18 @@ function Header() {
                 </div>
                 
                 <div className="login">
-                   <a className="login" type="submit" onClick={()=>setShow(!isShow)} >{btnname}</a>
+                   <a className="login" type="submit" ><Link to="/login">Login/Signup</Link></a>
+                   {/* <Switch>
+                   
+                   <Route  path="/login" component={Login} />
+                   </Switch> */}
                 </div>
             </div>
         </div>
         <App/>
         </>
     
-    :
-    <>
-        <Join/>
-        <div className="login">
-            <a className="login" type="submit" onClick={()=>setShow(!isShow)} >{btnname}</a>
-        </div>
-    </>
+    
 
      )  
     
@@ -50,3 +49,4 @@ function Header() {
 
 
 export default Header;
+//react
