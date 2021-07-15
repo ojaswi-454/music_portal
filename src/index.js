@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter,Link,Switch,Route} from 'react-router-dom';
- import Header from "./components/Header";
-import Login from "./components/loginpage";
+ import Main from "./components/Main";
+// import Login from "./components/loginpage";
+import Signup from "./components/containers/Signup/index";
+import Signin from "./components/containers/Signin/index"
 
-import './components/joining';
 function Appp(){
     return(
 <Switch>
 
-<Route exact="true" path="/" component={Header} />
-<Route  path="/login" component={Login} />
+<Route exact="true" path="/" component={Main} />
+<Route  path="/signup" component={Signup} />
+<Route  path="/signin" component={Signin} />
 </Switch>
     )
 

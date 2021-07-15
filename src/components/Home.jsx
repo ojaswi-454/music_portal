@@ -1,7 +1,7 @@
 import React from "react";
 import Font from "./Font";
 import Cards from "./Cards";
-import Lists from "./Lists";
+import Lists from "./List";
 
 function Home(){
     return(
