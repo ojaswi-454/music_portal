@@ -1,4 +1,4 @@
-import { SIGN_IN_SUCCESS, LOG_OUT_SUCCESS } from "./auth.types";
+import { SIGN_IN_SUCCESS,SIGN_IN_SUCCESS, LOG_OUT_SUCCESS } from "./auth.types";
 import Session from "../../../service/session";
 
 export const signInSuccess = (data) => (dispatch) => {
@@ -23,3 +23,15 @@ export const logOutSuccess = () => (dispatch) => {
     type: LOG_OUT_SUCCESS,
   });
 };
+export const signUpSuccess=(data)=>(dispatch)=>{
+  Session.set("token", data.token);
+  Session.setObject("userinfo", data.userinfo);
+
+  dispatch(
+    {  data,
+    type: SIGN_UP_SUCCESS
+    },()=>{
+      console.log("CallBack from SignUp Success")
+    }
+  )
+}
